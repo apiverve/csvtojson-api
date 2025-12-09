@@ -1,0 +1,107 @@
+openapi: 3.0.4
+info:
+  title: CSV to JSON Converter
+  description: CSV to JSON Converter is a powerful tool for converting CSV data into JSON format. It supports custom delimiters, header detection, and handles quoted fields properly.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/csvtojson:
+    post:
+      summary: Convert CSV to JSON
+      description: CSV to JSON Converter is a powerful tool for converting CSV data into JSON format. It supports custom delimiters, header detection, and handles quoted fields properly.
+      operationId: csvtojson
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  row_count: 2
+                  column_count: 3
+                  columns:
+                  - name
+                  - age
+                  - city
+                  json:
+                  - name: John Doe
+                    age: '30'
+                    city: New York
+                  - name: Jane Smith
+                    age: '25'
+                    city: Los Angeles
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                csv:
+                  type: string
+                  description: The CSV data to convert to JSON
+                  example: >-
+                    name,age,city
+
+                    John Doe,30,New York
+
+                    Jane Smith,25,Los Angeles
+                delimiter:
+                  type: string
+                  description: 'The delimiter used in the CSV (default: comma)'
+                  default: ','
+                  example: ','
+                has_header:
+                  type: boolean
+                  description: 'Whether the first row contains column headers (default: true)'
+                  default: true
+                  example: true
+              required:
+              - csv
+              example:
+                csv: >-
+                  name,age,city
+
+                  John Doe,30,New York
+
+                  Jane Smith,25,Los Angeles
+                delimiter: ','
+                has_header: true
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
