@@ -12,16 +12,8 @@ public class BasicExample {
         CSVtoJSONConverterAPIClient client = new CSVtoJSONConverterAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Request body
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;csv&quot;, &quot;name,age,city
-John Doe,30,New York
-Jane Smith,25,Los Angeles&quot;);
-        parameters.put(&quot;delimiter&quot;, &quot;,&quot;);
-        parameters.put(&quot;has_header&quot;, true);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
