@@ -48,7 +48,6 @@ namespace APIVerve.API.CSVtoJSONConverter
         public string Name { get; set; }
 
         [JsonProperty("age")]
-        [JsonConverter(typeof(ParseStringConverter))]
         public long Age { get; set; }
 
         [JsonProperty("city")]
