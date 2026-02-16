@@ -44,7 +44,13 @@ from apiverve_csvtojsonconverter.apiClient import CsvtojsonAPIClient
 # Initialize the client with your APIVerve API key
 api = CsvtojsonAPIClient("[YOUR_API_KEY]")
 
-query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
 
 try:
     # Make the API call
@@ -82,7 +88,13 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
 ```
 
 ###### Simple Request
@@ -138,7 +150,13 @@ from apiverve_csvtojsonconverter.apiClient import CsvtojsonAPIClient, CsvtojsonA
 
 api = CsvtojsonAPIClient("[YOUR_API_KEY]")
 
-query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
 
 try:
     result = api.execute(query)
@@ -159,7 +177,13 @@ from apiverve_csvtojsonconverter.apiClient import CsvtojsonAPIClient, CsvtojsonA
 
 api = CsvtojsonAPIClient("[YOUR_API_KEY]")
 
-query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
 
 try:
     result = api.execute(query)
@@ -193,7 +217,13 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_csvtojsonconverter.apiClient import CsvtojsonAPIClient, CsvtojsonAPIClientError
 
-query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
 
 # Using context manager ensures proper cleanup
 with CsvtojsonAPIClient("[YOUR_API_KEY]") as api:
@@ -219,7 +249,13 @@ from apiverve_csvtojsonconverter.apiClient import CsvtojsonAPIClient
 # Enable debug mode
 api = CsvtojsonAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -234,8 +270,15 @@ from apiverve_csvtojsonconverter.apiClient import CsvtojsonAPIClient
 
 api = CsvtojsonAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "csv": "name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles",
+    "delimiter": ",",
+    "has_header": true
+}
+
 try:
-    query = { "csv": "name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles", "delimiter": ",", "has_header": true }
     result = api.execute(query)
     print(result)
 finally:
