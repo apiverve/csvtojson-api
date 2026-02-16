@@ -1,0 +1,16 @@
+name: apiverve_csvtojson
+description: CSV to JSON Converter is a powerful tool for converting CSV data into JSON format. It supports custom delimiters, header detection, and handles quoted fields properly.
+version: 1.1.14
+homepage: https://apiverve.com/marketplace/csvtojson?utm_source=dart&utm_medium=homepage
+repository: https://github.com/apiverve/csvtojson-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
