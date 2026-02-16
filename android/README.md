@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:csvtojson-api:1.1.13'
+    implementation 'com.github.apiverve:csvtojson-api:1.1.14'
 }
 ```
 
@@ -48,8 +48,8 @@ try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
     parameters.put("csv", "name,age,city
-John,30,New York
-Jane,25,Los Angeles");
+John Doe,30,New York
+Jane Smith,25,Los Angeles");
     parameters.put("delimiter", ",");
     parameters.put("has_header", true);
 
