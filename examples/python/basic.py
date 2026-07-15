@@ -14,14 +14,22 @@ API_URL = 'https://api.apiverve.com/v1/csvtojson'
 
 def call_csvtojson_api():
     """
-    Make a GET request to the CSV to JSON Converter API
+    Make a POST request to the CSV to JSON Converter API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;csv&#x27;: &#x27;name,age,city\nJohn Doe,30,New York\nJane Smith,25,Los Angeles&#x27;,
+    &#x27;delimiter&#x27;: &#x27;,&#x27;,
+    &#x27;has_header&#x27;: true
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
