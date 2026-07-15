@@ -135,6 +135,11 @@ async function makeRequest() {
       "age",
       "city"
     ],
+    "inferredTypes": {
+      "name": "string",
+      "age": "integer",
+      "city": "string"
+    },
     "json": [
       {
         "name": "John Doe",
