@@ -50,6 +50,10 @@ paths:
                     - name
                     - age
                     - city
+                  inferredTypes:
+                    name: string
+                    age: integer
+                    city: string
                   json:
                     - name: John Doe
                       age: '30'
