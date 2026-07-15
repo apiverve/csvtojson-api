@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/csvtojson";
 
         /// <summary>
-        /// Make a GET request to the CSV to JSON Converter API
+        /// Make a POST request to the CSV to JSON Converter API
         /// </summary>
         static async Task<JsonDocument> CallCSVtoJSONConverterAPI()
         {
@@ -29,7 +29,15 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                var response = await client.GetAsync(API_URL);
+                // Request body
+                var requestBody &#x3D; new { csv &#x3D; &quot;name,age,city
+John Doe,30,New York
+Jane Smith,25,Los Angeles&quot;, delimiter &#x3D; &quot;,&quot;, has_header &#x3D; true };
+
+                var jsonContent = JsonSerializer.Serialize(requestBody);
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(API_URL, content);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
