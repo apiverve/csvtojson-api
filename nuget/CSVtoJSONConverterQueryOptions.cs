@@ -26,6 +26,6 @@ namespace APIVerve.API.CSVtoJSONConverter
         /// Whether the first row contains column headers (default: true)
         /// </summary>
         [JsonProperty("has_header")]
-        public string Has_header { get; set; }
+        public bool? Has_header { get; set; }
     }
 }
