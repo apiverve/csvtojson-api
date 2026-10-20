@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: CSV to JSON Converter
   description: >-
-    CSV to JSON Converter is a powerful tool for converting CSV data into JSON
-    format. It supports custom delimiters, header detection, and handles quoted
-    fields properly.
+    CSV to JSON Converter parses raw CSV text into an array of JSON objects with
+    column names and row counts. It handles comma, semicolon, tab, or pipe
+    delimiters, with optional header row detection.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/csvtojson:
     post:
-      summary: Convert CSV to JSON
+      summary: CSV to JSON Converter
       description: Convert CSV data to JSON format with custom delimiter support
       operationId: csvtojson
       parameters: []
