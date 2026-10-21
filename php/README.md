@@ -1,6 +1,6 @@
 # CSV to JSON Converter API - PHP Package
 
-CSV to JSON Converter is a powerful tool for converting CSV data into JSON format. It supports custom delimiters, header detection, and handles quoted fields properly.
+CSV to JSON Converter parses raw CSV text into an array of JSON objects with column names and row counts. It handles comma, semicolon, tab, or pipe delimiters, with optional header row detection.
 
 ## Installation
 
@@ -112,11 +112,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/csvtojson?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/csvtojson?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/csvtojson?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/csvtojson?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/csvtojson?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/csvtojson?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
