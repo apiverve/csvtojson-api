@@ -1,4 +1,4 @@
-## 1.1.14
+## 1.2.3
 
 - Initial release
 - Full API support for CSV to JSON Converter API

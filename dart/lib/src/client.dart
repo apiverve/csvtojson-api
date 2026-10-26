@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// CSV to JSON Converter API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/csvtojson?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/csvtojson?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [csv] (required) - The CSV data to convert to JSON
